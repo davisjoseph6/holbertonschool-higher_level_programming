@@ -19,5 +19,6 @@ def main():
     for index, arg in enumerate(argv, start=1):
         print(f"{index}: {arg}")
 
+
 if __name__ == "__main__":
     main()
