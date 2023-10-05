@@ -2,8 +2,9 @@
 def square(line):
     result = []
     for i in line:
-       result.append(i ** 2)
+        result.append(i ** 2)
     return result
+
 
 def square_matrix_simple(matrix=[]):
     if not matrix:
