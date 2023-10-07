@@ -9,7 +9,7 @@ def list_division(my_list_1, my_list_2, list_length):
 
             if (not isinstance(num1, (int, float))) or \
                     (not isinstance(num2, (int, float))):
-                            raise TypeError("wrong type")
+                        raise TypeError("wrong type")
 
             if num2 == 0:
                 raise ZeroDivisionError("division by 0")
