@@ -1,14 +1,18 @@
 #!/usr/bin/python3
 '''this module define an empty class'''
+
+
 class Square:
     '''
     this class represent a square
     '''
     def __init__(self, size=0):
         self.__size = size
+
     @property
     def size(self):
         return self.__size
+
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
@@ -17,5 +21,6 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
+
     def area(self):
         return self.__size ** 2
