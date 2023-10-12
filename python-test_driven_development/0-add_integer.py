@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """define function add rwo integers"""
+
+
 def add_integer(a, b=98):
     '''function that adds 2 integers'''
     if not isinstance(a, (int, float)):
