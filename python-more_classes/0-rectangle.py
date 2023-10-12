@@ -2,8 +2,10 @@
 """
 This module defines an empty rectangle class.
 """
+
+
 class Rectangle:
     """
-    This class represents a rectanglee.
+    This class represents a rectangle.
     """
     pass
