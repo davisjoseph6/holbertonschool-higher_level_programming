@@ -12,6 +12,8 @@ Testing of adding two ints using add_integer function:
 
 >>> add_integer(100.3, -2)
 98
+
+
 Testing when a or b are not ints
 
 >>> add_integer(4, "School")
