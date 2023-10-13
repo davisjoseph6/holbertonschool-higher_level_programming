@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 class Rectangle:
-    """
-    This defines an empty rectangle
-    """
+
 
     def __init__(self, width=0, height=0):
         """
@@ -31,10 +29,16 @@ class Rectangle:
 
     @property
     def height(self):
+        """
+        Retrieve the height of the ractnagle.
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """
+        Set the width of the rectangle with validation.
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
