@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+"""
+This module represents a class Rectangle that defines a rectangle by: (based on 0-rectangle.py)
+"""
 class Rectangle:
+    """
+    This class represents a rectangle.
+    """
 
 
     def __init__(self, width=0, height=0):
