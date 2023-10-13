@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 """
-This module represents a class Rectangle that defines a rectangle by: (based on 0-rectangle.py)
+This module represents a class Rectangle that defines a rectangle
 """
+
+
 class Rectangle:
     """
     This class represents a rectangle.
     """
-
 
     def __init__(self, width=0, height=0):
         """
@@ -55,7 +56,6 @@ class Rectangle:
 if __name__ == "__main__":
     my_rectangle = Rectangle(4, 2)
     print(my_rectangle.__dict__)
-
-    my_rectangle.height = 10
     my_rectangle.width = 3
+    my_rectangle.height = 10
     print(my_rectangle.__dict__)
