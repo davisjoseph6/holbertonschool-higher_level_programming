@@ -46,6 +46,6 @@ if __name__ == "__main__":
     my_rectangle = Rectangle(4, 2)
     print(my_rectangle.__dict__)
 
-    my_rectangle.width = 3
     my_rectangle.height = 10
+    my_rectangle.width = 3
     print(my_rectangle.__dict__)
