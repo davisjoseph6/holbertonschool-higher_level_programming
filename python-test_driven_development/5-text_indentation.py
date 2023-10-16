@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ function that prints a text """
 
+
 def text_indentation(text):
     """ print texte """
     punctuation = [".", "?", ":"]

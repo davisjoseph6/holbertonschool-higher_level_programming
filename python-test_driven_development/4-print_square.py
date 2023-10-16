@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''Write a function that print a square with the character #'''
 
+
 def print_square(size):
     '''def and print square of size'''
     if not isinstance(size, int):
