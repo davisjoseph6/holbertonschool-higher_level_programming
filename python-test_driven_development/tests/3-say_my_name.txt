@@ -1,22 +1,16 @@
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
->>> say_my_name("John", "Smith")
-My name is John Smith
-
->>> say_my_name("Walter", "White")
-My name is Walter White
-
->>> say_my_name("Bob")
-My name is Bob
-
->>> say_my_name(12, "White")
+>>> say_my_name(5, "smith")
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/root/holbertonschool-higher_level_programming/python-test_driven_development/3-say_my_name.py", line 5, in say_my_name
-    raise TypeError("first_name must be a string or last_name must be a string")
-TypeError: first_name must be a string or last_name must be a string
+TypeError: first_name must be a string
 
->>> print(e)
+>>> say_my_name("walter", 5)
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'e' is not defined
+TypeError: last_name must be a string
+
+>>> say_my_name("bob", "smith")
+My name is bob smith
+
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
