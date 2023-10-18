@@ -1,0 +1,43 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BaseGeometry()
+
+>>> bg.integer_validator("my_int", 12)
+
+>>> bg.integer_validator("width", 89)
+
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 15, in integer_validator
+    raise TypeError(f"{name} must be an integer")
+TypeError: name must be an integer
+
+>>> print("[{}] {}".format(e.__class__.__name__, e))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'e' is not defined
+
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 17, in integer_validator
+    raise ValueError(f"{name} must be greater than 0")
+ValueError: age must be greater than 0
+
+>>> print("[{}] {}".format(e.__class__.__name__, e))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'e' is not defined
+
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 17, in integer_validator
+    raise ValueError(f"{name} must be greater than 0")
+ValueError: distance must be greater than 0
+
+>>> print("[{}] {}".format(e.__class__.__name__, e))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'e' is not defined
