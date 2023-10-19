@@ -1,43 +1,83 @@
+===============================
+doctest for 7-base_geometry.txt
+===============================
+Importing .py module:
+
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 >>> bg = BaseGeometry()
+test empty
 
->>> bg.integer_validator("my_int", 12)
+    >>> bg.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+basic use
 
->>> bg.integer_validator("width", 89)
+    >>> bg.integer_validator("age", 15)
+Zero value
 
->>> bg.integer_validator("name", "John")
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/root/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 15, in integer_validator
-    raise TypeError(f"{name} must be an integer")
-TypeError: name must be an integer
+    >>> bg.integer_validator("age", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: age must be greater than 0
+Negative value
 
->>> print("[{}] {}".format(e.__class__.__name__, e))
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'e' is not defined
+    >>> bg.integer_validator("age", -30)
+    Traceback (most recent call last):
+    ...
+    ValueError: age must be greater than 0
+string
 
->>> bg.integer_validator("age", 0)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/root/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 17, in integer_validator
-    raise ValueError(f"{name} must be greater than 0")
-ValueError: age must be greater than 0
+    >>> bg.integer_validator("age", "50")
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+float
 
->>> print("[{}] {}".format(e.__class__.__name__, e))
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'e' is not defined
+    >>> bg.integer_validator("age", "5.1223")
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+list
 
->>> bg.integer_validator("distance", -4)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/root/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 17, in integer_validator
-    raise ValueError(f"{name} must be greater than 0")
-ValueError: distance must be greater than 0
+    >>> bg.integer_validator("age", [50])
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+Tuple
 
->>> print("[{}] {}".format(e.__class__.__name__, e))
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'e' is not defined
+    >>> bg.integer_validator("age", (50,))
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+Set
+
+    >>> bg.integer_validator("age", (50, "titi"))
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+Boolean
+
+    >>> bg.integer_validator("age",True)
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+None
+
+    >>> bg.integer_validator("age",None)
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
+One argument
+
+    >>> bg.integer_validator(50)
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+No arguments
+
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
