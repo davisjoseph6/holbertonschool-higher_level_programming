@@ -3,13 +3,14 @@
 
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """Square class, a subclass of Rectangle"""
 
     def __init__(self, size):
         """Initialize a Square with a given size."""
         self.integer_validator("size", size)
-        super().__init__(size, size) # Call the constructor of the parent class
+        super().__init__(size, size)  # Call the constructor of the parent class
 
         def area(self):
             """Calculate the area of the sqaure."""
