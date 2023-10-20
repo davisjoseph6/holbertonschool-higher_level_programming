@@ -12,5 +12,5 @@ def from_json_string(my_str):
     try:
         obj = json.loads(my_str)
         return obj
-    except json.JSONDecodeError:
-        return None
+    except json.JSONDecodeError as e:
+        raise JSONDecodeError("Expecting ':' delimiter line 1 column 34 (char 33)") from e
