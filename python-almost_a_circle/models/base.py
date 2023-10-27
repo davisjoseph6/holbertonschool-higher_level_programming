@@ -51,16 +51,8 @@ class Base:
     def create(cls, **dictionary):
         """ Create a dummy instance with mandatory attributes """
         if cls.__name__ == "Rectangle":
-            dummy = cls(1, 1)
-        elif cls.__name__ == "Square":
-            dummy = cls(1)
+            obj = cls(2, 3)
         else:
-            return None
-
-        arg_names = ["id", "width", "height", "x", "y"]
-
-        for key, value in dictionary.items():
-            if key in arg_names:
-                setattr(dummy, key, value)
-
-        return dummy
+            obj = cls(3)
+        obj.update(**dictionary)
+        return obj
