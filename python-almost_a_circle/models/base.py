@@ -26,6 +26,9 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """
+        save to file
+        """
         if list_objs is None:
             list_objs = []
 
