@@ -26,6 +26,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """ from jason strong"""
         if json_string is None or json_string == "":
             return[]
         return json.loads(json_string)
