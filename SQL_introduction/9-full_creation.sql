@@ -1,4 +1,9 @@
 -- Check if the table exists, and create it if not
+CREATE TABLE IF NOT EXISTS hbtn_0c_0.second_table (
+	id INT,
+	name VARCHAR(256),
+	score INT
+);
 
 -- Insert records into the second _table
 INSERT INTO hbtn_0c_0.second_table (id, name, score) VALUES
