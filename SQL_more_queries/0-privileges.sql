@@ -1,13 +1,4 @@
--- 0-privileges.sql
+-- List privileges for both users
 
--- Create user_0d_1 if not exists
-CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost';
-
--- Grant all privileges to user_0d_1
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
-
--- Create user_0d_2 if not exists
-CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost';
-
--- Grant all privileges to user_0d_2
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_2'@'localhost';
+SHOW GRANTS FOR 'user_0d_1'@'localhost';
+SHOW GRANTS FOR 'user_0d_2'@'localhost';
