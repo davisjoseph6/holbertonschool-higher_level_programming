@@ -1,17 +1,13 @@
-# Create user_0d_1
-echo "CREATE USER 'user_0d_1'@'localhost';" | mysql -hlocalhost -uroot -p
+-- 0-privileges.sql
 
-# Grant privileges to user_0d_1
-echo "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER ON *.* TO 'user_0d_1'@'localhost';" | mysql -hlocalhost -uroot -p
+-- Create user_0d_1 if not exists
+CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost';
 
-# Create user_0d_2
-echo "CREATE USER 'user_0d_2'@'localhost';" | mysql -hlocalhost -uroot -p
+-- Grant all privileges to user_0d_1
+GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
 
-# Grant privileges to user_0d_2
-echo "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER ON *.* TO 'user_0d_2'@'localhost';" | mysql -hlocalhost -uroot -p
+-- Create user_0d_2 if not exists
+CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost';
 
-# List privileges for both users
-cat <<EOF | mysql -hlocalhost -uroot -p
-SHOW GRANTS FOR 'user_0d_1'@'localhost';
-SHOW GRANTS FOR 'user_0d_2'@'localhost';
-EOF
+-- Grant all privileges to user_0d_2
+GRANT ALL PRIVILEGES ON *.* TO 'user_0d_2'@'localhost';
