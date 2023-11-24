@@ -260,7 +260,6 @@ CHANGE users SET name = “Holberton” WHERE id = 89;
 
 UPDATE users SET name = “Holberton”;
 
-
 Question #8
 How do you list all users records with age > 21 in this table?
 
