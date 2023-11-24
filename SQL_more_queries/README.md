@@ -78,7 +78,6 @@ $
 Use the sandbox to run MySQL
 In the container, credentials are root/root
 
-
 Ask for container Ubuntu 20.04
 Connect via SSH
 OR connect via the Web terminal
