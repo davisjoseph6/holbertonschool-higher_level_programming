@@ -2,7 +2,7 @@
 
 USE hbtn_0d_2;
 
--- Check if the table exists
+-- Check if the table exists before creating it
 CREATE TABLE IF NOT EXISTS force_name (
     id INT,
     name VARCHAR(256) NOT NULL,
