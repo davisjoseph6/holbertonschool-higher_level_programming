@@ -2,33 +2,29 @@
 import MySQLdb
 import sys
 
-if __name__ == "__main__":
-    # Check if correct number of arguments is provided
-    if len(sys.argv) != 4:
-        print("Usage: {} <mysql_username> <mysql_password> <database_name>".format(sys.argv[0]))
-        sys.exit(1)
+if len(sys.argv) != 4:
+    print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
+    sys.exit(1)
 
-    # Assign provided arguments to variables
-    mysql_username = sys.argv[1]
-    mysql_password = sys.argv[2]
-    database_name = sys.argv[3]
+username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
 
-    # Connect to the MySQL server
-    db = MySQLdb.connect(host="localhost", port=3306, user=mysql_username, passwd=mysql_password, db=database_name)
+# Connect to the MySQL server
+db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
 
-    # Create a cursor object to interact with the database
-    cursor = db.cursor()
+# Create a cursor object to execute queries
+cursor = db.cursor()
 
-    # Execute the SQL query to select all states and order by states.id
-    cursor.execute("SELECT * FROM states ORDER BY states.id")
+# Execute the query to select all states and order by id
+query = "SELECT * FROM states ORDER BY id;"
+cursor.execute(query)
 
-    # Fetch all the rows
-    rows = cursor.fetchall()
+# Fetch all the rows
+rows = cursor.fetchall()
 
-    # Display the results
-    for row in rows:
-        print(row)
+# Display the results
+for row in rows:
+    print(row)
 
-    # Close the cursor and database connection
-    cursor.close()
-    db.close()
+# Close the cursor and database connection
+cursor.close()
+db.close()
