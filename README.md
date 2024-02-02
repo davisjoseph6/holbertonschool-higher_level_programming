@@ -1,1 +1,1 @@
-python and SQL based projects.
+python and SQL based projects
